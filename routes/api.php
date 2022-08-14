@@ -1,4 +1,9 @@
 <?php
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header('Access-Control-Allow-Origin:  *');
+header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Authorization');
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -6,9 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\NoticesController;
 use App\Http\Controllers\Api\UserController;
 
-header('Access-Control-Allow-Origin:  *');
-header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, PATCH, DELETE');
-header('Access-Control-Allow-Headers: Accept, Content-Type, X-Auth-Token, Origin, Authorization');
+
 
 /*
 |--------------------------------------------------------------------------
